@@ -3,9 +3,9 @@ import "../styles/Header.css";
 
 const Header = () => {
 	return (
-		<div className="header">
+		<header className="header">
 			<p>Encabezado de la página!</p>
-		</div>
+		</header>
 	);
 };
 

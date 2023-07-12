@@ -1,29 +1,22 @@
 import React from "react";
+import Article from "./Article";
 import "../styles/main.css";
 
 const Main = () => {
-	var btn = document.getElementsByClassName("btnElegant");
-	btn.addEventListener("click", function () {
-		var vis = document.getElementsByClassName("Visibilidad");
-
-		if (vis.style.display == "block") {
-			vis.style.display = "none";
-		}
-	});
-
+	const titulo = ["Titulo 1", "Titulo 2", "Titulo 3"];
+	const texto = ["Contenido 1", "Contenido 2", "Contenido 3"];
 	return (
-		<div className="main">
-			<button className="btnElegant">Show/Hide</button>
+		<main className="main">
 			<div className="Visibilidad">
-				<h3>Encabezado de la pagina</h3>
+				<h2>Encabezado de la pagina</h2>
 				<br></br>
-				<ul>
-					<li>Hola</li>
-					<li>Hola</li>
-					<li>Hola</li>
-				</ul>
+				<Article cabecera={titulo[0]} contenido={texto[0]} />
+				<br></br>
+				<Article cabecera={titulo[1]} contenido={texto[1]} />
+				<br></br>
+				<Article cabecera={titulo[2]} contenido={texto[2]} />
 			</div>
-		</div>
+		</main>
 	);
 };
 
